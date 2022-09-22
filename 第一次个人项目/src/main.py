@@ -80,8 +80,8 @@ def compareParagraph(doc1, i, doc2, j, min_segment = 3): #核心算法，功能�
     ratio = float(count) /  min(len1, len2)
     if count > 10 and ratio > 0.1:#若抄袭的数量超过十则展示
         print(' 发现相同内容 '.center(80, '*'))
-        print('文件1第{0:0>4d}段内容：{1}'.format(i + 1, p1))
-        print('文件2第{0:0>4d}段内容：{1}'.format(j + 1, p2))
+        print('文件1第{0:0>4d}段内容：'.format(i + 1))
+        print('文件2第{0:0>4d}段内容：'.format(j + 1))
        # print('相同内容：', list_p)
         print('相同字符比：{1:.2f}%\n相同字符数： {0}\n'.format(count, ratio * 100))
     return list_p
@@ -114,7 +114,7 @@ m2 = 0
 m1 = round(float(ratio) *100,2)
 m2 = "%.2f%%" % m1
 print(m2)
-doc3 = sys.argv[3]
+doc3 = sys.argv[3]#获得answer文件的绝对路径
 with open(doc3,"w") as f:
     f.write("文章相似百分比为：")
     f.write(m2)

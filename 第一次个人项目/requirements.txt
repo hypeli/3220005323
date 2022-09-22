@@ -1,6 +1,0 @@
-用到的都是比较简单的库。
-
-
-系统：windows
-编译环境：eclipse
-语言：python3
